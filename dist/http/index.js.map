@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/http/index.js"],"names":["HttpServer","require","module","exports","createServer"],"mappings":";;AAAA,IAAMA,aAAaC,QAAQ,MAAR,CAAnB;AACAC,OAAOC,OAAP,CAAeC,YAAf,GAA8B;AAAA,SAAM,IAAIJ,UAAJ,EAAN;AAAA,CAA9B","file":"index.js","sourcesContent":["const HttpServer = require('http');\r\nmodule.exports.createServer = () => new HttpServer(); "]}

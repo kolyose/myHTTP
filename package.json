@@ -1,0 +1,55 @@
+{
+  "name": "myHTTP",
+  "version": "1.0.0",
+  "description": "Educational project - creation of own Http server module",
+  "main": "index.js",
+  "author": "Sergey Kolesnik",
+  "license": "MIT",
+  "scripts": {
+    "start": "rimraf ./dist && babel -d ./dist ./src -s && node dist/index.js",
+    "dev": "node dev.js",
+    "lint:js": "eslint ./src",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "babel-register": "^6.24.0",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-config-prettier": "^1.5.0",
+    "eslint-plugin-import": "^2.2.0",
+    "lint-staged": "^3.4.0",
+    "pre-commit": "^1.2.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-underscore-dangle": 0,
+      "class-methods-use-this": 0,
+      "no-bitwise": 0
+    }
+  },
+  "pre-commit": "lint-staged",
+  "dependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-preset-env": "^1.2.1",
+    "rimraf": "^2.6.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env"
+      ]
+    ]
+  }
+}
